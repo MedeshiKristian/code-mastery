@@ -1,0 +1,67 @@
+:root {
+  --color-purple: #34306c;
+  --color-hover-purple: #beadff;
+  --color-light-purple: #633cff;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-light-grey: #c9f7fd; /* #f4f7fd; */
+  --color-lines-light: #bbbbbb; /* #d1d7dc #e4ebfa; */
+  --color-lines-dark: #3e3f4e;
+  --color-borders: #cfcfcf;
+  --color-red: #ff3939; /*#cc0000 */
+  --color-hover-red: #990000; /*#c82222*/
+  --shadow-hover: 0 0 24px 0 rgba(99, 60, 255, 0.2);
+  --transition-param: box-shadow 0.2s ease-in-out;
+  --color-very-dark-grey-bg: #2b2c37;
+  --color-dark-grey: #20212c;
+  --color-theme-primary: var(--color-white);
+  --color-theme-secondary: var(--color-light-grey);
+  --color-text: var(--color-black);
+  --color-theme-lines: var(--color-lines-light);
+  --duration: 0.25s;
+}
+
+.dark {
+  --color-text: var(--color-white);
+  --color-lines: var(--color-lines-dark);
+  --color-theme-primary: var(--color-very-dark-grey-bg);
+  --color-theme-secondary: var(--color-dark-grey);
+  --color-theme-lines: var(--color-lines-dark);
+}
+
+* {
+  transition:
+    background-color var(--duration) ease-in-out, 
+    /* color var(--duration) ease-in-out,  */
+    border var(--duration) ease-in-out,
+    box-shadow var(--duration) ease-in-out;
+}
+
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text);
+  background: var(--color-theme-secondary);
+}
+
+
+input {
+  outline: 0 !important;
+  min-width: 0 !important;
+  background: transparent !important;
+  /* cursor: pointer; */
+}
+
+textarea {
+  outline: 0 !important;
+  background: transparent !important;
+  /* cursor: pointer; */
+}
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

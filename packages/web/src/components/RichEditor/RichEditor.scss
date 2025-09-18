@@ -1,0 +1,73 @@
+.rich-editor {
+  .quill {
+    border-radius: 0.2rem;
+  }
+
+  .ql-editor {
+    min-height: 14em;
+    // border-color: var(--color-theme-lines) !important;
+  }
+
+  .quill:focus-within {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .quill > .ql-container > .ql-editor.ql-blank::before {
+    color: var(--color-theme-text);
+  }
+
+  .ql-container:focus-within {
+    // border: 1px solid var(--color-light-purple) !important;
+    // border-top: none !important;
+    transition: border-width 0s, border-color var(--duration) ease-in-out;
+  }
+
+  .ql-picker-label {
+    color: var(--color-text) !important;
+    transition: all var(--duration) ease-in-out;
+  }
+
+  .ql-fill {
+    fill: var(--color-text) !important;
+    transition: all var(--duration) ease-in-out;
+  }
+
+  .ql-stroke {
+    stroke: var(--color-text) !important;
+    transition: all var(--duration) ease-in-out;
+  }
+}
+
+/* .en.quill .ql-picker.ql-size .ql-picker-label::before,
+.en.quill .ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: 'Normal' ;
+}
+.en.quill .ql-picker.ql-size .ql-picker-label[data-value=small]::before,
+.en.quill .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
+  content: 'Small' !important;
+}
+.en.ql-picker.ql-size .ql-picker-label[data-value=large]::before,
+.en.quill .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
+  content: 'Large' !important;
+}
+.en.quill .ql-picker.ql-size .ql-picker-label[data-value=huge]::before,
+.en.quill .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
+  content: 'Huge' !important;
+} */
+
+/* .uk.quill .ql-picker.ql-size .ql-picker-label::before,
+.uk.quill .ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: 'Нормальний' !important;
+}
+.uk.quill .ql-picker.ql-size .ql-picker-label[data-value=small]::before,
+.uk.quill .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
+  content: 'Малий' !important;
+}
+.uk.quill .ql-picker.ql-size .ql-picker-label[data-value=large]::before,
+.uk.quill .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
+  content: 'Великий' !important;
+}
+.uk.quill .ql-picker.ql-size .ql-picker-label[data-value=huge]::before,
+.uk.quill .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
+  content: 'Величезний' !important;
+} */
