@@ -28,7 +28,7 @@ function Account() {
   const image = useWatch({ name: 'image', control });
   const [imageSrc, setImageSrc] = useState();
   const userId = useSelector((store) => store.auth.user?.userId);
-  const { data, isLoading } = useQuery(`${userId}/info`, getMyInfo, {
+  const { data, isLoading, refetch: refetchProfile } = useQuery(`${userId}/info`, getMyInfo, {
     onSuccess: (data) => {
       ['email', 'first_name', 'last_name', 'role'].forEach((key) => {
         if (!getFieldState(key).isDirty) {
@@ -52,10 +52,14 @@ function Account() {
     }
   }, [image]);
 
-  const updateAccountMutation = useMutation(updateMyInfo);
+  const updateAccountMutation = useMutation(updateMyInfo, {
+    onSuccess: () => {
+      refetchProfile();
+    },
+  });
 
   const isObject = (obj) => typeof obj === 'object';
-  // eslint-disable-next-line no-unused-vars
+
   const removeEmpty = (obj) => Object.fromEntries(
     Object.entries(obj)
       .map(([k, v]) => [k, isObject(v) ? removeEmpty(v) : v])
@@ -67,7 +71,7 @@ function Account() {
   };
 
   const formEl = useRef(null);
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     data = removeEmpty(data);
     const formData = new FormData();
     Object.entries(data).forEach(([key, value]) => {
@@ -113,6 +117,7 @@ function Account() {
               {user?.last_name}
             </h1>
             <h2 className="body-text-m">{user?.email}</h2>
+            {user?.role && <h2 className="body-text-m">{t(`signUp.${user?.role}`)}</h2>}
           </div>
         </div>
         <div className="flex w-full gap-5 justify-start">

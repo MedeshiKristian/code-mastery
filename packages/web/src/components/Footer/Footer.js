@@ -18,7 +18,7 @@ function Footer() {
         <div className="flex flex-col gap-1 self-center">
           <Link to="/">
             <img
-              src="logo.png"
+              src="/logo.png"
               alt=""
               className="h-12"
             />

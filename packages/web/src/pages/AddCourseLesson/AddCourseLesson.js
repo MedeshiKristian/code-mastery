@@ -46,7 +46,7 @@ function AddCourseLesson() {
   };
 
   const navigate = useNavigate();
-  // eslint-disable-next-line no-unused-vars
+
   const createCourseLessonMutation = useMutation(async (data) => createCourseLesson(id, data), {
     onSuccess: (data) => {
       navigate(`/courses/${id}?lesson=${data.id}`);
