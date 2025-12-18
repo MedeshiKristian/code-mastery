@@ -7,7 +7,8 @@
     "install:web": "cd packages/web && yarn",
     "start:api": "cd packages/api && yarn start",
     "start:web": "yarn --cwd packages/web start",
-    "dev": "yarn install:api && yarn install:web && concurrently \"yarn start:api\" \"yarn start:web\""
+    "dev": "yarn install:api && yarn install:web && concurrently \"yarn start:api\" \"yarn start:web\"",
+    "seed": "cd packages/api && yarn ts-node ./node_modules/typeorm-extension/bin/cli.cjs seed:run -d src/data-source.ts"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"

@@ -1,7 +1,11 @@
 import "reflect-metadata";
-import { DataSource } from "typeorm";
+import { DataSource, DataSourceOptions } from "typeorm";
+import { SeederOptions } from "typeorm-extension";
+import UserSeeder from "./database/seeds/userSeeder";
+import userFactory from "./database/factories/userFactory";
+import CourseSeeder from "./database/seeds/courseSeeder";
 
-export const db = new DataSource({
+const options: DataSourceOptions & SeederOptions = {
   type: "postgres",
   host: "localhost",
   port: 5432,
@@ -13,4 +17,8 @@ export const db = new DataSource({
   entities: ["src/entities/**/*.ts"],
   migrations: [],
   subscribers: [],
-});
+  seeds: [UserSeeder, CourseSeeder],
+  factories: [userFactory]
+}
+
+export const db = new DataSource(options);
