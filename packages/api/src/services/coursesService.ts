@@ -29,6 +29,7 @@ export class CoursesService {
       ...course,
       image: getFullPath(req, course.image),
     }));
+    transformedCourses.sort((course1, course2) => course1.course_id - course2.course_id);
     return { courses: transformedCourses, resultsLength };
   }
 
@@ -50,12 +51,14 @@ export class CoursesService {
     }));
     
     const boughtCourseIds = await this.getBoughtCoursesFromStripe(req.user.email);
+
+    const isAuthor = course.author.user_id === req.user.user_id
     
     return { 
       course: { 
         ...course,
         isAuthor: course.author.user_id === req.user.user_id,
-        isBought: boughtCourseIds.includes(courseId.toString()),
+        isBought: isAuthor || boughtCourseIds.includes(courseId.toString()),
       }, 
       lessons, 
     };

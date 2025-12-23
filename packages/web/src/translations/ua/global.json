@@ -98,7 +98,8 @@
   "currentPassword": "Поточний пароль",
   "newPassword": "Новий пароль",
   "newPasswordPlaceholder": "Введіть новий пароль",
-  "passwordPlaceholder": "Введіть ваш поточний пароль",
+  "noCoursesEnrolled": "Ви ще не зареєстровані на жоден курс.",
+  "browseCourses": "Переглянути доступні курси",
   "card": {
     "card": "Картка",
     "number": "Номер",

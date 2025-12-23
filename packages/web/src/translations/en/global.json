@@ -99,6 +99,8 @@
   "newPassword": "New password",
   "newPasswordPlaceholder": "Enter a new password",
   "passwordPlaceholder": "Enter your current password",
+  "noCoursesEnrolled": "You haven't enrolled to any courses yet.",
+  "browseCourses": "Browse available courses",
   "card": {
     "card": "Card",
     "number": "Number",

@@ -329,10 +329,10 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 -- Data for Name: completed_lessons; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.completed_lessons (id, user_id, lesson_id) FROM stdin;
-4	6	8
-5	10	8
-\.
+-- COPY public.completed_lessons (id, user_id, lesson_id) FROM stdin;
+-- 4	6	8
+-- 5	10	8
+-- \.
 
 
 --
@@ -340,22 +340,22 @@ COPY public.completed_lessons (id, user_id, lesson_id) FROM stdin;
 --
 
 COPY public.courses (course_id, name, description, price, duration, level, image, author_id, instructors) FROM stdin;
-33	C Programming	Introduction to C programming.	49.99	30	Beginner	uploads/c.webp	6	John Doe, Jane Smith
-34	Java Fundamentals	Comprehensive Java course.	59.99	45	Intermediate	uploads/java.webp	6	John Doe, Jane Smith
-35	JavaScript Essentials	Learn JavaScript from scratch.	39.99	30	Beginner	uploads/javascript.webp	6	John Doe, Jane Smith
-36	Kotlin for Android	Develop Android apps with Kotlin.	70.00	50	Expert	uploads/kotlin.webp	6	John Doe, Jane Smith
-37	Python Programming	Introduction to Python.	50.00	40	Beginner	uploads/python.webp	6	John Doe, Jane Smith
-38	Swift for iOS	Build iOS apps using Swift.	65.00	50	Expert	uploads/swift.webp	6	John Doe, Jane Smith
-39	Advanced C++	Deep dive into C++ programming.	70.00	40	Expert	uploads/cpp.webp	6	John Doe, Jane Smith
-40	Ruby on Rails	Comprehensive Ruby on Rails course.	65.00	45	Intermediate	uploads/ruby.webp	6	John Doe, Jane Smith
-41	Data Structures	Essential data structures for software development.	60.00	35	Intermediate	uploads/data-structures.webp	6	John Doe, Jane Smith
-42	Algorithms	Algorithmic techniques and principles.	75.00	50	Expert	uploads/algorithms.webp	6	John Doe, Jane Smith
-43	HTML & CSS	Web development from scratch.	30.00	25	Beginner	uploads/html-css.webp	6	John Doe, Jane Smith
-44	React Development	Building applications with React.	80.00	50	Intermediate	uploads/react.webp	6	John Doe, Jane Smith
-45	Node.js	Server-side development with Node.js.	90.00	60	Expert	uploads/nodejs.webp	6	John Doe, Jane Smith
-46	Angular Fundamentals	Mastering Angular for front-end development.	85.00	45	Intermediate	uploads/angular.webp	6	John Doe, Jane Smith
-47	Full-stack JavaScript	Learn full-stack development with JavaScript.	95.00	70	All levels	uploads/fullstack-js.webp	6	John Doe, Jane Smith
-48	Cloud Computing Basics	Introduction to cloud computing.	50.00	30	Beginner	uploads/cloud-computing.webp	6	John Doe, Jane Smith
+1	C++ Programming	Introduction to C++ programming.	49.99	30	Beginner	uploads/c.webp	1	John Doe, Jane Smith
+2	Java Fundamentals	Comprehensive Java course.	59.99	45	Intermediate	uploads/java.webp	1	John Doe, Jane Smith
+3	JavaScript Essentials	Learn JavaScript from scratch.	39.99	30	Beginner	uploads/javascript.webp	1	John Doe, Jane Smith
+4	Kotlin for Android	Develop Android apps with Kotlin.	70.00	50	Expert	uploads/kotlin.webp	1	John Doe, Jane Smith
+5	Python Programming	Introduction to Python.	50.00	40	Beginner	uploads/python.webp	1	John Doe, Jane Smith
+6	Swift for iOS	Build iOS apps using Swift.	65.00	50	Expert	uploads/swift.webp	1	John Doe, Jane Smith
+7	Advanced C++	Deep dive into C++ programming.	70.00	40	Expert	uploads/cpp.webp	1	John Doe, Jane Smith
+8	Ruby on Rails	Comprehensive Ruby on Rails course.	65.00	45	Intermediate	uploads/ruby.webp	1	John Doe, Jane Smith
+9	Data Structures	Essential data structures for software development.	60.00	35	Intermediate	uploads/data-structures.webp	1	John Doe, Jane Smith
+10	Algorithms	Algorithmic techniques and principles.	75.00	50	Expert	uploads/algorithms.webp	1	John Doe, Jane Smith
+11	HTML & CSS	Web development from scratch.	30.00	25	Beginner	uploads/html-css.webp	1	John Doe, Jane Smith
+12	React Development	Building applications with React.	80.00	50	Intermediate	uploads/react.webp	1	John Doe, Jane Smith
+13	Node.js	Server-side development with Node.js.	90.00	60	Expert	uploads/nodejs.webp	1	John Doe, Jane Smith
+14	Angular Fundamentals	Mastering Angular for front-end development.	85.00	45	Intermediate	uploads/angular.webp	1	John Doe, Jane Smith
+15	Full-stack JavaScript	Learn full-stack development with JavaScript.	95.00	70	All levels	uploads/fullstack-js.webp	1	John Doe, Jane Smith
+16	Cloud Computing Basics	Introduction to cloud computing.	50.00	30	Beginner	uploads/cloud-computing.webp	1	John Doe, Jane Smith
 \.
 
 
@@ -363,9 +363,9 @@ COPY public.courses (course_id, name, description, price, duration, level, image
 -- Data for Name: lessons; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.lessons (course_id, title, lesson_id, lecture, attachments, tasks, tests) FROM stdin;
-33	Writing a Simple C++ Program	8	<iframe class="ql-video ql-align-center" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/imNlJohlLPk?showinfo=0"></iframe><h3>  C++ Programming: Writing a Simple C++ Program Topics discussed: </h3><ol><li>Basic introduction to the ‘main’ function. </li><li>Elements of a function definition. </li><li>An example of a complete C++ Program. </li><li>Introduction to the concept of “Types”. <span style="color: rgb(255, 255, 255);">f a complete C+</span></li></ol><h3>\tIn this lecture, we explore the fundamentals of writing a simple C++ program. The session begins with an introduction to the 'main' function, the entry point of any C++ application. We then delve into the elements of a function definition, highlighting syntax and structure. An example of a complete C++ program is provided to illustrate these concepts in practice. Finally, the lecture introduces the concept of “Types”, explaining their significance and usage in C++ programming.<span style="color: rgb(255, 255, 255);">t of “Types”.</span></h3><p><br></p>	[]	[]	[{"questionText":"<p>What is the entry point of a C++ program?</p>","options":["#include","\\"main\\" function","int","return"],"correctOptionIndex":1},{"questionText":"<p>What keyword is used to indicate the end of a statement?</p>","options":[":",";",".",","],"correctOptionIndex":1}]
-\.
+-- COPY public.lessons (course_id, title, lesson_id, lecture, attachments, tasks, tests) FROM stdin;
+-- 1	Writing a Simple C++ Program	1	<iframe class="ql-video ql-align-center" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/imNlJohlLPk?showinfo=0"></iframe><h3>  C++ Programming: Writing a Simple C++ Program Topics discussed: </h3><ol><li>Basic introduction to the ‘main’ function. </li><li>Elements of a function definition. </li><li>An example of a complete C++ Program. </li><li>Introduction to the concept of “Types”. <span style="color: rgb(255, 255, 255);">f a complete C+</span></li></ol><h3>\tIn this lecture, we explore the fundamentals of writing a simple C++ program. The session begins with an introduction to the 'main' function, the entry point of any C++ application. We then delve into the elements of a function definition, highlighting syntax and structure. An example of a complete C++ program is provided to illustrate these concepts in practice. Finally, the lecture introduces the concept of “Types”, explaining their significance and usage in C++ programming.<span style="color: rgb(255, 255, 255);">t of “Types”.</span></h3><p><br></p>	[]	[]	[{"questionText":"<p>What is the entry point of a C++ program?</p>","options":["#include","\\"main\\" function","int","return"],"correctOptionIndex":1},{"questionText":"<p>What keyword is used to indicate the end of a statement?</p>","options":[":",";",".",","],"correctOptionIndex":1}]
+-- \.
 
 
 --
@@ -380,31 +380,31 @@ COPY public.reviews (review_id, course_id, user_id, rating, comment) FROM stdin;
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.users (user_id, email, password, role, avatar_url, first_name, last_name) FROM stdin;
-6	email@x.com	$2b$10$1306OB1PNXoNhCjgoRWev.3oU6uQejfETcH6T4cNdltPb8ziPRTyy	teacher	uploads/1714551553896.jpg	Name	Surname
-10	example@email.com	$2b$10$fPpInc0VHXEfnK7/JvicPeARxpgFaMhccogHVj5DeEBbSeHkGMcxW	teacher	uploads/1716462347444.jpg	Bob	Smith
-\.
+-- COPY public.users (user_id, email, password, role, avatar_url, first_name, last_name) FROM stdin;
+-- 1	email@x.com	$2b$10$1306OB1PNXoNhCjgoRWev.3oU6uQejfETcH6T4cNdltPb8ziPRTyy	teacher	uploads/1714551553896.jpg	Name	Surname
+-- 2	example@email.com	$2b$10$fPpInc0VHXEfnK7/JvicPeARxpgFaMhccogHVj5DeEBbSeHkGMcxW	teacher	uploads/1716462347444.jpg	Bob	Smith
+-- \.
 
 
 --
 -- Name: completed_lessons_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.completed_lessons_id_seq', 5, true);
+SELECT pg_catalog.setval('public.completed_lessons_id_seq', 1, true);
 
 
 --
 -- Name: courses_course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.courses_course_id_seq', 48, true);
+SELECT pg_catalog.setval('public.courses_course_id_seq', 17, true);
 
 
 --
 -- Name: lessons_lesson_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.lessons_lesson_id_seq', 8, true);
+SELECT pg_catalog.setval('public.lessons_lesson_id_seq', 1, true);
 
 
 --
@@ -418,7 +418,7 @@ SELECT pg_catalog.setval('public.reviews_review_id_seq', 1, false);
 -- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.users_user_id_seq', 10, true);
+SELECT pg_catalog.setval('public.users_user_id_seq', 1, true);
 
 
 --
